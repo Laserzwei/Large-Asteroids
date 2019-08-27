@@ -1,6 +1,6 @@
 local modConfig = include("data/config/LargerAsteroidsConfig")
 
-local old_createSmallAsteroid = SectorGenerator.createSmallAsteroid -- self.createSmallAsteroid ?
+local old_createSmallAsteroid = SectorGenerator.createSmallAsteroid
 function SectorGenerator:createSmallAsteroid(translation, size, resources, material)
     local newsize = modConfig.MultiplyAsteroidSize(translation, size, resources, material)
     return old_createSmallAsteroid(self, translation, newsize, resources, material)
