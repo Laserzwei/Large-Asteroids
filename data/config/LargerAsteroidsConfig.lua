@@ -45,14 +45,14 @@ end
 Config.MultiplyFieldSize = function(numAsteroids, fieldSize, minAsteroidSize, maxAsteroidSize, hasResources, probability)
     local NewFieldSize = fieldSize * Config.NormalClusterMultiplier
     local Rand = math.random()
-    if Config.ChanceForTightCluster < Config.ChanceForSpreadCluster then
+    if Config.ChanceForTightCluster < Config.ChanceForSpeadCluster then
         if Rand < Config.ChanceForTightCluster then
             NewFieldSize = fieldSize * Config.TightClusterMultiplier
-        elseif Rand < Config.ChanceForSpreadCluster then
+        elseif Rand < Config.ChanceForSpeadCluster then
             NewFieldSize = fieldSize * Config.SpreadClusterMultiplier
         end
     else
-        if Rand < Config.ChanceForSpreadCluster then
+        if Rand < Config.ChanceForSpeadCluster then
             NewFieldSize = fieldSize * Config.SpreadClusterMultiplier
         elseif Rand < Config.ChanceForTightCluster then
             NewFieldSize = fieldSize * Config.TightClusterMultiplier

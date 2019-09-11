@@ -14,6 +14,6 @@ end
 
 local old_createAsteroidFieldEx = SectorGenerator.createAsteroidFieldEx
 function SectorGenerator:createAsteroidFieldEx(numAsteroids, fieldSize, minAsteroidSize, maxAsteroidSize, hasResources, probability)
-    local newfieldSize = modConfig. MultiplyFieldSize(numAsteroids, fieldSize, minAsteroidSize, maxAsteroidSize, hasResources, probability)
+    local newfieldSize = modConfig.MultiplyFieldSize(numAsteroids, fieldSize, minAsteroidSize, maxAsteroidSize, hasResources, probability)
     return old_createAsteroidFieldEx(self, numAsteroids, newfieldSize, minAsteroidSize, maxAsteroidSize, hasResources, probability)
 end
